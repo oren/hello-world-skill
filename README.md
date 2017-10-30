@@ -1,4 +1,4 @@
-# Build Alexa skill quick and using the terminal
+# Build Alexa skill using the terminal
 
 The quickest way to build an Alexa skill. The goal of this repo is to allow building Alexa skill from the CLI and without reaching out to the web interface.
 
