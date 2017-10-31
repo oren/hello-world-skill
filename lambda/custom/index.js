@@ -29,7 +29,8 @@ var handlers = {
     },
 
     'SayHello': function () {
-        var say = 'Fit Science help you lose fat or get stronger based on your goals and preferences. Do you want to lose fat, get stronger, or both? You can also ask me for list of programs.'
+        // var say = 'Fit Science help you lose fat or get stronger based on your goals and preferences. Do you want to lose fat, get stronger, or both? You can also ask me for list of programs.'
+        var say = 'this is i test'
         var reprompt = 'I learned from the best nutritionists and athlete coaches in the world. I learned from the best and will personalize the program for your needs.Reply with lose fat, get stronger, or both.'
 
         var header = 'Fit Science'

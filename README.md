@@ -35,6 +35,8 @@ Say: "Alexa, open oren states quiz"
 
 `ask deploy` didn't work since .ask/config is being populated with a skill_id. What I currently do is delete the skill from the web interface and start all over. I am sure there is a better way. I just don't know how.
 
+`ask deploy -t lambda` works when the skill id present and I only need to update the lambda.
+
 ## How to create a skill from scratch
 
 (This is probably not be working. This document is a work in progress. If you know how to make it work, send a PR please)
