@@ -24,22 +24,28 @@ var handlers = {
         this.emit('SayDisclaimer');
     },
 
+    'BothIntent': function () {
+        this.emit('SayBoth');
+    },
+    'SixIntent': function () {
+        this.emit('SaySix');
+    },
+
     'MyNameIsIntent': function () {
         this.emit('SayHelloName');
     },
 
     'SayHello': function () {
-        // var say = 'Fit Science help you lose fat or get stronger based on your goals and preferences. Do you want to lose fat, get stronger, or both? You can also ask me for list of programs.'
-        var say = 'this is i test'
-        var reprompt = 'I learned from the best nutritionists and athlete coaches in the world. I learned from the best and will personalize the program for your needs.Reply with lose fat, get stronger, or both.'
+        var say = 'Fit Science help you lose fat or get stronger based on your goals and preferences.'
+        var reprompt = ' I learned from the best nutritionists and athlete coaches in the world. I will personalize the program for your needs. Do you want to lose fat, get stronger, or both? You can also ask me for list of programs.'
 
         var header = 'Fit Science'
         var shouldEndSession = false
 
-        this.response.speak(say)
+        this.response.speak(say + reprompt)
                      .cardRenderer('Fit Science', say);
 
-        this.emit(':responseReady');
+        this.emit(':ask', say + reprompt);
     },
 
     'SayDisclaimer': function () {
@@ -51,6 +57,28 @@ var handlers = {
                      .cardRenderer('Fit Science', say);
 
         this.emit(':responseReady');
+    },
+
+    'SayBoth': function () {
+        var say = "So you want to lose fat and get stronger. That's awesome! How many times a week can you work out?"
+
+        var header = 'Fit Science'
+
+        this.response.speak(say)
+                     .cardRenderer('Fit Science', say);
+
+        this.emit(':ask', say);
+    },
+
+    'SaySix': function () {
+        var say = "6 days a week is fantastic for achieving your strength goals. I am excited for you! I researched for the best strength programs out there that can fit into 6 days. Do you have access to a barbell?"
+
+        var header = 'Fit Science'
+
+        this.response.speak(say)
+                     .cardRenderer('Fit Science', say);
+
+        this.emit(':ask', say);
     },
 
     'SayHelloName': function () {

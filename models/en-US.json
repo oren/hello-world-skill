@@ -1,7 +1,7 @@
 {
     "interactionModel":{
         "languageModel":{
-            "invocationName":"oren test",
+            "invocationName":"fitscience",
             "types":[],
             "intents":[
                 {
@@ -28,13 +28,21 @@
                     ]
                 },
                 {
-                    "name":"DisclaimerIntent",
+                    "name":"BothIntent",
                     "slots":[
 
                     ],
                     "samples":[
-                        "disclaimer",
-                        "legal"
+                        "both"
+                    ]
+                },
+                {
+                    "name":"SixIntent",
+                    "slots":[
+
+                    ],
+                    "samples":[
+                        "six"
                     ]
                 },
                 {
